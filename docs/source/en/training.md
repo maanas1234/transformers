@@ -115,7 +115,9 @@ model = AutoModelForCausalLM.from_pretrained(model_name, dtype="auto")
 </hfoptions>
 
 ```py
-TrainingArguments(
+
+# defining training argument
+training_args = TrainingArguments(
     output_dir="qwen3-finetuned",
     num_train_epochs=3,
     per_device_train_batch_size=2,
@@ -128,6 +130,7 @@ TrainingArguments(
     save_strategy="epoch",
     load_best_model_at_end=True,
 )
+
 ```
 
 ## Training
